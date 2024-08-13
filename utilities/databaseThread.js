@@ -88,7 +88,7 @@ export const createPolicyWithBulkOperations = async (dataArray) => {
 parentPort.on('message', async (data) => {
   try {
     if (!mongoose.connection.readyState) {
-      await mongoose.connect('mongodb://localhost:27017/policy');
+      await mongoose.connect('mongodb+srv://mongodb:f6ae4wjVEkhclxsj@cluster0.vzyqs.mongodb.net/policy');
     }
     await createPolicyWithBulkOperations(JSON.parse(data));
     parentPort.postMessage({status:true , message :'Data saved successfully.'});

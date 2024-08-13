@@ -1,7 +1,7 @@
  import mongoose from "mongoose";
 
 const dbConnection = () =>{
-    mongoose.connect("mongodb://localhost:27017/policy")
+    mongoose.connect("mongodb+srv://mongodb:f6ae4wjVEkhclxsj@cluster0.vzyqs.mongodb.net/policy")
     .then(()=>{
         console.log("db connected successfully");
     }).catch(e=>{
